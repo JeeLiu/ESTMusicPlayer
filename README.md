@@ -3,11 +3,10 @@
 <p align="center">
 <a href="https://weibo.com/jinfali"><img src="https://img.shields.io/badge/contact-@Aufree-orange.svg?style=flat"></a>
 <a href="https://github.com/Aufree/ESTMusicPlayer/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat"></a>
+<a href="https://github.com/Aufree"><img src="https://ga-beacon.appspot.com/UA-70965318-2/ESTMusicPlayer/readme" alt="GA"></a>
 </p>
 
 ESTMusicPlayer is an elegant and simple iOS music player based on DOUAudioStreamer.
-
-> Made With :heart:  By [The EST Group](http://est-group.org/).
 
 ## [中文文档](https://github.com/Aufree/ESTMusicPlayer#中文文档-1)
 
@@ -28,15 +27,12 @@ ESTMusicPlayer is an elegant and simple iOS music player based on DOUAudioStream
 
 ![](http://ww3.sinaimg.cn/large/76dc7f1bgw1eyjzh3e6zaj21fr16cgwq.jpg)
 
-<p align="center">
-<img src="http://ww3.sinaimg.cn/large/76dc7f1bgw1eyo197r4sig20ku1127wo.gif" alt="screenshots" title="screenshots" width="375"/>
-</p>
-
 ## Build Instructions
 
 CocoaPods is a dependency manager for Cocoa projects, If you're not install the Cocoapods on your machine, Run:
 
 > $ gem install cocoapods
+
 > $ pod setup
 
 Download the source code
@@ -73,7 +69,7 @@ Released under the [MIT license](https://github.com/Aufree/ESTMusicPlayer/blob/m
 
 # 中文文档
 
-ESTMusicPlayer 是一款基于 DOUAudioStreamer 开发的一款优雅简洁的音乐播放器.
+ESTMusicPlayer 是基于 DOUAudioStreamer 开发的一款优雅简洁的音乐播放器.
 
 > 开源自 [The EST Group](http://est-group.org/) 团队.
 
@@ -94,15 +90,12 @@ ESTMusicPlayer 是一款基于 DOUAudioStreamer 开发的一款优雅简洁的�
 
 ![](http://ww3.sinaimg.cn/large/76dc7f1bgw1eyjzh3e6zaj21fr16cgwq.jpg)
 
-<p align="center">
-<img src="http://ww3.sinaimg.cn/large/76dc7f1bgw1eyo197r4sig20ku1127wo.gif" alt="screenshots" title="screenshots" width="375"/>
-</p>
-
 ## 编译配置
 
 CocoaPods 是一款 Cocoa 项目包管理工具, 如果你尚未安装 Cocoapods, 运行以下命令进行安装:
 
 > $ gem install cocoapods
+
 > $ pod setup
 
 下载源代码

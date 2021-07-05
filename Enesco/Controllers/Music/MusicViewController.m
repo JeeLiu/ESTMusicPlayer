@@ -23,7 +23,6 @@ static void *kDurationKVOKey = &kDurationKVOKey;
 static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 
 @interface MusicViewController ()
-@property (nonatomic, strong) MusicEntity *musicEntity;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *albumImageLeftConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *albumImageRightConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *musicMenuButton;
@@ -41,6 +40,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 @property (weak, nonatomic) IBOutlet UIButton *nextMusicButton;
 @property (weak, nonatomic) IBOutlet UIButton *musicToggleButton;
 @property (weak, nonatomic) IBOutlet UIButton *musicCycleButton;
+@property (strong, nonatomic) MusicEntity *musicEntity;
 @property (strong, nonatomic) UIVisualEffectView *visualEffectView;
 @property (strong, nonatomic) MusicIndicator *musicIndicator;
 @property (strong, nonatomic) NSMutableArray *originArray;
@@ -409,7 +409,12 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     [MusicHandler configNowPlayingInfoCenter];
     
     Track *track = [[Track alloc] init];
-    track.audioFileURL = [NSURL URLWithString:_musicEntity.musicUrl];
+    
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:_musicEntity.fileName ofType: @"mp3"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath];
+    
+//    track.audioFileURL = [NSURL URLWithString:_musicEntity.musicUrl];
+    track.audioFileURL = fileURL;
     
     @try {
         [self removeStreamerObserver];
@@ -516,7 +521,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 # pragma mark - Music convenient method
 
 - (void)loadPreviousAndNextMusicImage {
-    [MusicHandler cacheMusicCovorWithMusicEntities:_musicEntities currentIndex:_currentIndex];
+    [MusicHandler cacheMusicCoverWithMusicEntities:_musicEntities currentIndex:_currentIndex];
 }
 
 # pragma mark - HUD
